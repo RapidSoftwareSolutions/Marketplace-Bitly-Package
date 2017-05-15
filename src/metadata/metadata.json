@@ -61,7 +61,7 @@
         {
           "name": "accessToken",
           "type": "credentials",
-          "info": "Your application's bitly client id.",
+          "info": "The OAuth access token for specified user.",
           "required": true
         },
         {
@@ -86,7 +86,7 @@
         {
           "name": "accessToken",
           "type": "credentials",
-          "info": "Your application's bitly client id.",
+          "info": "The OAuth access token for specified user.",
           "required": true
         },
         {
@@ -111,7 +111,7 @@
         {
           "name": "accessToken",
           "type": "credentials",
-          "info": "Your application's bitly client id.",
+          "info": "The OAuth access token for specified user.",
           "required": true
         },
         {
@@ -136,7 +136,7 @@
         {
           "name": "accessToken",
           "type": "credentials",
-          "info": "Your application's bitly client id.",
+          "info": "The OAuth access token for specified user.",
           "required": true
         },
         {
@@ -161,7 +161,7 @@
         {
           "name": "accessToken",
           "type": "credentials",
-          "info": "Your application's bitly client id.",
+          "info": "The OAuth access token for specified user.",
           "required": true
         },
         {
@@ -186,7 +186,7 @@
         {
           "name": "accessToken",
           "type": "credentials",
-          "info": "Your application's bitly client id.",
+          "info": "The OAuth access token for specified user.",
           "required": true
         },
         {
@@ -229,7 +229,7 @@
         {
           "name": "accessToken",
           "type": "credentials",
-          "info": "Your application's bitly client id.",
+          "info": "The OAuth access token for specified user.",
           "required": true
         },
         {
@@ -260,7 +260,7 @@
         {
           "name": "accessToken",
           "type": "credentials",
-          "info": "Your application's bitly client id.",
+          "info": "The OAuth access token for specified user.",
           "required": true
         },
         {
@@ -309,7 +309,7 @@
         {
           "name": "accessToken",
           "type": "credentials",
-          "info": "Your application's bitly client id.",
+          "info": "The OAuth access token for specified user.",
           "required": true
         },
         {
@@ -358,7 +358,7 @@
         {
           "name": "accessToken",
           "type": "credentials",
-          "info": "Your application's bitly client id.",
+          "info": "The OAuth access token for specified user.",
           "required": true
         },
         {
@@ -407,7 +407,7 @@
         {
           "name": "accessToken",
           "type": "credentials",
-          "info": "Your application's bitly client id.",
+          "info": "The OAuth access token for specified user.",
           "required": true
         },
         {
@@ -450,7 +450,7 @@
         {
           "name": "accessToken",
           "type": "credentials",
-          "info": "Your application's bitly client id.",
+          "info": "The OAuth access token for specified user.",
           "required": true
         },
         {
@@ -493,7 +493,7 @@
         {
           "name": "accessToken",
           "type": "credentials",
-          "info": "Your application's bitly client id.",
+          "info": "The OAuth access token for specified user.",
           "required": true
         },
         {
@@ -518,7 +518,7 @@
         {
           "name": "accessToken",
           "type": "credentials",
-          "info": "Your application's bitly client id.",
+          "info": "The OAuth access token for specified user.",
           "required": true
         },
         {
@@ -561,7 +561,7 @@
         {
           "name": "accessToken",
           "type": "credentials",
-          "info": "Your application's bitly client id.",
+          "info": "The OAuth access token for specified user.",
           "required": true
         },
         {
@@ -604,7 +604,7 @@
         {
           "name": "accessToken",
           "type": "credentials",
-          "info": "Your application's bitly client id.",
+          "info": "The OAuth access token for specified user.",
           "required": true
         },
         {
@@ -647,7 +647,7 @@
         {
           "name": "accessToken",
           "type": "credentials",
-          "info": "Your application's bitly client id.",
+          "info": "The OAuth access token for specified user.",
           "required": true
         },
         {
@@ -666,6 +666,561 @@
           "name": "units",
           "type": "String",
           "info": "An integer representing the time units to query data for. Pass -1 to return all units of time.",
+          "required": false
+        },
+        {
+          "name": "limit",
+          "type": "Number",
+          "info": "1 to 1000 (default=100).",
+          "required": false
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getAppInfo",
+      "description": "Return information about an OAuth app.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "The OAuth access token for specified user.",
+          "required": true
+        },
+        {
+          "name": "clientId",
+          "type": "String",
+          "info": "The client ID of the app.",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getUser",
+      "description": "Return information about a user.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "The OAuth access token for specified user.",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "updateUser",
+      "description": "Update user information.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "The OAuth access token for specified user.",
+          "required": true
+        },
+        {
+          "name": "login",
+          "type": "String",
+          "info": "The bitly login of the user whose info to look up. If not given, the authenticated user will be used.",
+          "required": true
+        },
+        {
+          "name": "fullName",
+          "type": "String",
+          "info": "Set the users full name value. (only available for the authenticated user.)",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getUserLinkHistory",
+      "description": "Returns entries from a user's link history in reverse chronological order.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "The OAuth access token for specified user.",
+          "required": true
+        },
+        {
+          "name": "link",
+          "type": "String",
+          "info": "The Bitlink or Bitlinks to return metadata for (when specified, overrides all other options), can be provided multiple times.",
+          "required": false
+        },
+        {
+          "name": "limit",
+          "type": "Number",
+          "info": "Integer in the range 1 to 100 default: 50, specifying the max number of results to return.",
+          "required": false
+        },
+        {
+          "name": "offset",
+          "type": "Number",
+          "info": "Specifying the numbered result at which to start (for pagination).",
+          "required": false
+        },
+        {
+          "name": "createdBefore",
+          "type": "Number",
+          "info": "Timestamp as an integer unix epoch.",
+          "required": false
+        },
+        {
+          "name": "createdAfter",
+          "type": "Number",
+          "info": "Timestamp as an integer unix epoch.",
+          "required": false
+        },
+        {
+          "name": "modifiedAfter",
+          "type": "Number",
+          "info": "Timestamp as an integer unix epoch.",
+          "required": false
+        },
+        {
+          "name": "expandClientId",
+          "type": "Boolean",
+          "info": "Whether to provide additional information about encoding application. default: false.",
+          "required": false
+        },
+        {
+          "name": "archived",
+          "type": "String",
+          "info": "on, offor both whether to include or exclude archived history entries. (on = return only archived history entries) default: off.",
+          "required": false
+        },
+        {
+          "name": "private",
+          "type": "String",
+          "info": "on, off and both whether to include or exclude private history entries. (on = return only private history entries) default: both.",
+          "required": false
+        },
+        {
+          "name": "deeplinks",
+          "type": "String",
+          "info": "on, offor both whether to include or exclude deeplink entries. (on = return only active deeplink history entries) default: off.",
+          "required": false
+        },
+        {
+          "name": "user",
+          "type": "String",
+          "info": "The user for whom to retrieve history entries (if different from authenticated user).",
+          "required": false
+        },
+        {
+          "name": "exactDomain",
+          "type": "String",
+          "info": "An exact domain to filter on history entries.",
+          "required": false
+        },
+        {
+          "name": "rootDomain",
+          "type": "String",
+          "info": "A root domain to filter on history entries.",
+          "required": false
+        },
+        {
+          "name": "keyword",
+          "type": "String",
+          "info": "Custom keyword to filter on history entries.",
+          "required": false
+        },
+        {
+          "name": "campaignId",
+          "type": "String",
+          "info": "Filter to return only links for the given campaign_id, can be provided multiple times.",
+          "required": false
+        },
+        {
+          "name": "query",
+          "type": "String",
+          "info": "Ad hoc text search string.",
+          "required": false
+        }
+
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getUserTrackingDomains",
+      "description": "Returns a list of tracking domains a user has configured.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "The OAuth access token for specified user.",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getUserBitlinksClicks",
+      "description": "Returns the aggregate number of clicks on all of the authenticated user's Bitlinks.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "The OAuth access token for specified user.",
+          "required": true
+        },
+        {
+          "name": "unit",
+          "type": "String",
+          "info": "minute, hour, day, week or month, default: day.",
+          "required": false
+        },
+        {
+          "name": "units",
+          "type": "String",
+          "info": "An integer representing the time units to query data for. Pass -1 to return all units of time.",
+          "required": false
+        },
+        {
+          "name": "rollup",
+          "type": "Boolean",
+          "info": "Return data for multiple units rolled up to a single result instead of a separate value for each period of time.",
+          "required": false
+        },
+        {
+          "name": "limit",
+          "type": "Number",
+          "info": "1 to 1000 (default=100).",
+          "required": false
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getUserBitlinksClicksByCountries",
+      "description": "Returns aggregate metrics about the countries referring click traffic to all of the authenticated user's Bitlinks.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "The OAuth access token for specified user.",
+          "required": true
+        },
+        {
+          "name": "unit",
+          "type": "String",
+          "info": "minute, hour, day, week or month, default: day.",
+          "required": false
+        },
+        {
+          "name": "units",
+          "type": "String",
+          "info": "An integer representing the time units to query data for. Pass -1 to return all units of time.",
+          "required": false
+        },
+        {
+          "name": "limit",
+          "type": "Number",
+          "info": "1 to 1000 (default=100).",
+          "required": false
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getUserMostClickedBitlinks",
+      "description": "Returns the authenticated user's most-clicked Bitlinks (ordered by number of clicks) in a given time period.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "The OAuth access token for specified user.",
+          "required": true
+        },
+        {
+          "name": "unit",
+          "type": "String",
+          "info": "minute, hour, day, week or month, default: day.",
+          "required": false
+        },
+        {
+          "name": "units",
+          "type": "String",
+          "info": "An integer representing the time units to query data for. Pass -1 to return all units of time.",
+          "required": false
+        },
+        {
+          "name": "limit",
+          "type": "Number",
+          "info": "1 to 1000 (default=100).",
+          "required": false
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getUserBitlinksReferrers",
+      "description": "Returns aggregate metrics about the pages referring click traffic to all of the authenticated user's Bitlinks.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "The OAuth access token for specified user.",
+          "required": true
+        },
+        {
+          "name": "unit",
+          "type": "String",
+          "info": "minute, hour, day, week or month, default: day.",
+          "required": false
+        },
+        {
+          "name": "units",
+          "type": "String",
+          "info": "An integer representing the time units to query data for. Pass -1 to return all units of time.",
+          "required": false
+        },
+        {
+          "name": "rollup",
+          "type": "Boolean",
+          "info": "Return data for multiple units rolled up to a single result instead of a separate value for each period of time.",
+          "required": false
+        },
+        {
+          "name": "limit",
+          "type": "Number",
+          "info": "1 to 1000 (default=100).",
+          "required": false
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getUserBitlinksReferringDomains",
+      "description": "Returns aggregate metrics about the domains referring click traffic to all of the authenticated user's Bitlinks. If the user is a master account, or is a subaccount with full_reports permission, the user may choose to view the metrics of any account belonging to the master account.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "The OAuth access token for specified user.",
+          "required": true
+        },
+        {
+          "name": "unit",
+          "type": "String",
+          "info": "minute, hour, day, week or month, default: day.",
+          "required": false
+        },
+        {
+          "name": "units",
+          "type": "String",
+          "info": "An integer representing the time units to query data for. Pass -1 to return all units of time.",
+          "required": false
+        },
+        {
+          "name": "rollup",
+          "type": "Boolean",
+          "info": "Return data for multiple units rolled up to a single result instead of a separate value for each period of time.",
+          "required": false
+        },
+        {
+          "name": "limit",
+          "type": "Number",
+          "info": "1 to 1000 (default=100).",
+          "required": false
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getUserBitlinksNumber",
+      "description": "Returns the number of Bitlinks created in a given time period by the authenticated user.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "The OAuth access token for specified user.",
+          "required": true
+        },
+        {
+          "name": "unit",
+          "type": "String",
+          "info": "minute, hour, day, week or month, default: day.",
+          "required": false
+        },
+        {
+          "name": "units",
+          "type": "String",
+          "info": "An integer representing the time units to query data for. Pass -1 to return all units of time.",
+          "required": false
+        },
+        {
+          "name": "rollup",
+          "type": "Boolean",
+          "info": "Return data for multiple units rolled up to a single result instead of a separate value for each period of time.",
+          "required": false
+        },
+        {
+          "name": "limit",
+          "type": "Number",
+          "info": "1 to 1000 (default=100).",
+          "required": false
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "checkBitlyProDomain",
+      "description": "Query whether a given domain is a valid bitly pro domain. Keep in mind that bitly custom short domains are restricted to less than 15 characters in length.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "The OAuth access token for specified user.",
+          "required": true
+        },
+        {
+          "name": "domain",
+          "type": "String",
+          "info": "A short domain. ie: nyti.ms.",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getTrackingDomainClicks",
+      "description": "Returns the number of clicks on Bitlinks pointing to the specified tracking domain that have occured in a given time period.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "The OAuth access token for specified user.",
+          "required": true
+        },
+        {
+          "name": "domain",
+          "type": "String",
+          "info": "A tracking domain as returned from /v3/user/tracking_domain_list.",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getTrackingDomainShortenCounts",
+      "description": "Returns the number of clicks on Bitlinks pointing to the specified tracking domain that have occured in a given time period.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "The OAuth access token for specified user.",
+          "required": true
+        },
+        {
+          "name": "domain",
+          "type": "String",
+          "info": "A tracking domain as returned from /v3/user/tracking_domain_list.",
+          "required": true
+        },
+        {
+          "name": "unit",
+          "type": "String",
+          "info": "minute, hour, day, week or month, default: day.",
+          "required": false
+        },
+        {
+          "name": "units",
+          "type": "String",
+          "info": "An integer representing the time units to query data for. Pass -1 to return all units of time.",
+          "required": false
+        },
+        {
+          "name": "rollup",
+          "type": "Boolean",
+          "info": "Return data for multiple units rolled up to a single result instead of a separate value for each period of time.",
           "required": false
         },
         {
