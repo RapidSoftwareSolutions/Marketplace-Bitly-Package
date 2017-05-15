@@ -1,0 +1,687 @@
+{
+  "package": "Bitly",
+  "tagline": "Bitly API",
+  "description": "",
+  "image": "https://logo.clearbit.com/bitly.com",
+  "repo": "https://github.com/RapidSoftwareSolutions/Marketplace-Bitly-Package",
+  "keywords": [
+    "API",
+    "bitly"
+  ],
+  "accounts": {
+    "domain": "bitly.com",
+    "credentials": [
+      "clientId",
+      "clientSecret",
+      "accessToken"
+    ]
+  },
+  "blocks": [
+    {
+      "name": "getAccessToken",
+      "description": "Returns access token.",
+      "args": [
+        {
+        "name": "clientId",
+        "type": "credentials",
+        "info": "Your application's bitly client id.",
+        "required": true
+        },
+        {
+          "name": "clientSecret",
+          "type": "credentials",
+          "info": "Your application's bitly client secret.",
+          "required": true
+        },
+        {
+          "name": "code",
+          "type": "credentials",
+          "info": "The OAuth verification code acquired via OAuth's web authentication protocol.",
+          "required": true
+        },
+        {
+          "name": "redirectUri",
+          "type": "String",
+          "info": "The page to which a user was redirected upon successfully authenticating.",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getBitlinkMetadata",
+      "description": "Returns metadata about a single Bitlink.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's bitly client id.",
+          "required": true
+        },
+        {
+          "name": "link",
+          "type": "String",
+          "info": "Bitlink.",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getLongURL",
+      "description": "Given a bitly URL or hash (or multiple), returns the target (long) URL.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's bitly client id.",
+          "required": true
+        },
+        {
+          "name": "shortUrl",
+          "type": "String",
+          "info": "shortUrl - refers to one or more Bitlinks. e.g.: http://bit.ly/1RmnUT or http://j.mp/1RmnUT.",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getBitlinkInfo",
+      "description": "This is used to return the page title for a given Bitlink.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's bitly client id.",
+          "required": true
+        },
+        {
+          "name": "shortUrl",
+          "type": "String",
+          "info": "shortUrl - refers to one or more Bitlinks. e.g.: http://bit.ly/1RmnUT or http://j.mp/1RmnUT.",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "searchBitlinkByLongURL",
+      "description": "This is used to query for a Bitlink based on a long URL.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's bitly client id.",
+          "required": true
+        },
+        {
+          "name": "url",
+          "type": "String",
+          "info": "One or more long URLs to lookup.",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "createBitlink",
+      "description": "Given a long URL, returns a Bitlink.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's bitly client id.",
+          "required": true
+        },
+        {
+          "name": "longUrl",
+          "type": "String",
+          "info": "A long URL to be shortened (example: https://rapidapi.com/).",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "updateBitlink",
+      "description": "Changes link metadata in a user's history.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's bitly client id.",
+          "required": true
+        },
+        {
+          "name": "link",
+          "type": "String",
+          "info": "The Bitlink to be edited.",
+          "required": true
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "info": "The title of this Bitlink.",
+          "required": false
+        },
+        {
+          "name": "note",
+          "type": "String",
+          "info": "A description of, or note about, this Bitlink.",
+          "required": false
+        },
+        {
+          "name": "private",
+          "type": "Boolean",
+          "info": "Indicating privacy setting (defaults to user-level setting).",
+          "required": false
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "searchUserLinks",
+      "description": "This is used to query for a Bitlink shortened by the authenticated user based on a long URL or a Bitlink.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's bitly client id.",
+          "required": true
+        },
+        {
+          "name": "link",
+          "type": "String",
+          "info": "One or more Bitlinks to lookup.",
+          "required": false
+        },
+        {
+          "name": "url",
+          "type": "String",
+          "info": "One or more long URLs to lookup.",
+          "required": false
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "createUserBitlink",
+      "description": "Saves a long URL as a Bitlink in a user's history, with optional pre-set metadata. (Also returns a short URL for that link.)",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's bitly client id.",
+          "required": true
+        },
+        {
+          "name": "longUrl",
+          "type": "String",
+          "info": "The URL to be saved as a Bitlink.",
+          "required": true
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "info": "The title of this Bitlink.",
+          "required": false
+        },
+        {
+          "name": "note",
+          "type": "String",
+          "info": "A description of, or note about, this Bitlink.",
+          "required": false
+        },
+        {
+          "name": "private",
+          "type": "Boolean",
+          "info": "Indicating privacy setting (defaults to user-level setting).",
+          "required": false
+        },
+        {
+          "name": "domain",
+          "type": "String",
+          "info": "The short domain to use; either bit.ly, j.mp, or bitly.com or a custom short domain. The default for this parameter is the short domain selected by each user in their bitly account settings. Passing a specific domain via this parameter will override the default settings.",
+          "required": false
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getBitlinkClicksNumber",
+      "description": "Returns the number of clicks on a single Bitlink.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's bitly client id.",
+          "required": true
+        },
+        {
+          "name": "link",
+          "type": "String",
+          "info": "Bitlink.",
+          "required": true
+        },
+        {
+          "name": "unit",
+          "type": "String",
+          "info": "minute, hour, day, week or month, default: day.",
+          "required": false
+        },
+        {
+          "name": "units",
+          "type": "String",
+          "info": "An integer representing the time units to query data for. Pass -1 to return all units of time.",
+          "required": false
+        },
+        {
+          "name": "rollup",
+          "type": "Boolean",
+          "info": "Return data for multiple units rolled up to a single result instead of a separate value for each period of time.",
+          "required": false
+        },
+        {
+          "name": "limit",
+          "type": "Number",
+          "info": "1 to 1000 (default=100).",
+          "required": false
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getBitlinkClicksByCountry",
+      "description": "Returns metrics about the countries referring click traffic to a single Bitlink.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's bitly client id.",
+          "required": true
+        },
+        {
+          "name": "link",
+          "type": "String",
+          "info": "Bitlink.",
+          "required": true
+        },
+        {
+          "name": "unit",
+          "type": "String",
+          "info": "minute, hour, day, week or month, default: day.",
+          "required": false
+        },
+        {
+          "name": "units",
+          "type": "String",
+          "info": "An integer representing the time units to query data for. Pass -1 to return all units of time.",
+          "required": false
+        },
+        {
+          "name": "rollup",
+          "type": "Boolean",
+          "info": "Return data for multiple units rolled up to a single result instead of a separate value for each period of time.",
+          "required": false
+        },
+        {
+          "name": "limit",
+          "type": "Number",
+          "info": "1 to 1000 (default=100).",
+          "required": false
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getLinkEncoders",
+      "description": "Returns users who have encoded this long URL (optionally only those in the requesting user's social graph).",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's bitly client id.",
+          "required": true
+        },
+        {
+          "name": "link",
+          "type": "String",
+          "info": "Bitlink.",
+          "required": true
+        },
+        {
+          "name": "subaccounts",
+          "type": "Boolean",
+          "info": "Restrict to this enterprise account and its subaccounts",
+          "required": false
+        },
+        {
+          "name": "limit",
+          "type": "Number",
+          "info": "1 to 25 (default=10).",
+          "required": false
+        },
+        {
+          "name": "expandUser",
+          "type": "Boolean",
+          "info": "Include display names of encoders.",
+          "required": false
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getLinkEncodersByCount",
+      "description": "Returns users who have encoded this link (optionally only those in the requesting user's social graph), sorted by the number of clicks on each encoding user's link.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's bitly client id.",
+          "required": true
+        },
+        {
+          "name": "link",
+          "type": "String",
+          "info": "Bitlink.",
+          "required": true
+        },
+        {
+          "name": "subaccounts",
+          "type": "Boolean",
+          "info": "Restrict to this enterprise account and its subaccounts",
+          "required": false
+        },
+        {
+          "name": "limit",
+          "type": "Number",
+          "info": "1 to 25 (default=10).",
+          "required": false
+        },
+        {
+          "name": "expandUser",
+          "type": "Boolean",
+          "info": "Include display names of encoders.",
+          "required": false
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getEncodersNumber",
+      "description": "Returns the number of users who have shortened (encoded) a single Bitlink.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's bitly client id.",
+          "required": true
+        },
+        {
+          "name": "link",
+          "type": "String",
+          "info": "Bitlink.",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getLinkKeywordClicksByDestination",
+      "description": "Returns past destination urls for a keyword with the clicks per destination.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's bitly client id.",
+          "required": true
+        },
+        {
+          "name": "link",
+          "type": "String",
+          "info": "Bitlink.",
+          "required": true
+        },
+        {
+          "name": "unit",
+          "type": "String",
+          "info": "minute, hour, day, week or month, default: day.",
+          "required": false
+        },
+        {
+          "name": "units",
+          "type": "String",
+          "info": "An integer representing the time units to query data for. Pass -1 to return all units of time.",
+          "required": false
+        },
+        {
+          "name": "limit",
+          "type": "Number",
+          "info": "1 to 1000 (default=100).",
+          "required": false
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getBitlinkReferrers",
+      "description": "Returns metrics about the pages referring click traffic to a single Bitlink.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's bitly client id.",
+          "required": true
+        },
+        {
+          "name": "link",
+          "type": "String",
+          "info": "Bitlink.",
+          "required": true
+        },
+        {
+          "name": "unit",
+          "type": "String",
+          "info": "minute, hour, day, week or month, default: day.",
+          "required": false
+        },
+        {
+          "name": "units",
+          "type": "String",
+          "info": "An integer representing the time units to query data for. Pass -1 to return all units of time.",
+          "required": false
+        },
+        {
+          "name": "limit",
+          "type": "Number",
+          "info": "1 to 1000 (default=100).",
+          "required": false
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getBitlinkReferrersByDomain",
+      "description": "Returns metrics about the pages referring click traffic to a single Bitlink, grouped by referring domain.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's bitly client id.",
+          "required": true
+        },
+        {
+          "name": "link",
+          "type": "String",
+          "info": "Bitlink.",
+          "required": true
+        },
+        {
+          "name": "unit",
+          "type": "String",
+          "info": "minute, hour, day, week or month, default: day.",
+          "required": false
+        },
+        {
+          "name": "units",
+          "type": "String",
+          "info": "An integer representing the time units to query data for. Pass -1 to return all units of time.",
+          "required": false
+        },
+        {
+          "name": "limit",
+          "type": "Number",
+          "info": "1 to 1000 (default=100).",
+          "required": false
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getBitlinkReferringDomains",
+      "description": "Returns metrics about the domains referring click traffic to a single Bitlink.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Your application's bitly client id.",
+          "required": true
+        },
+        {
+          "name": "link",
+          "type": "String",
+          "info": "Bitlink.",
+          "required": true
+        },
+        {
+          "name": "unit",
+          "type": "String",
+          "info": "minute, hour, day, week or month, default: day.",
+          "required": false
+        },
+        {
+          "name": "units",
+          "type": "String",
+          "info": "An integer representing the time units to query data for. Pass -1 to return all units of time.",
+          "required": false
+        },
+        {
+          "name": "limit",
+          "type": "Number",
+          "info": "1 to 1000 (default=100).",
+          "required": false
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    }
+  ]
+}
