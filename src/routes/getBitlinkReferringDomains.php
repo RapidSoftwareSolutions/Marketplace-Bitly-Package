@@ -1,6 +1,6 @@
 <?php
 
-$app->post('/api/Bitly/getBitlinkReferrersByDomain', function ($request, $response) {
+$app->post('/api/Bitly/getBitlinkReferringDomains', function ($request, $response) {
 
     $settings = $this->settings;
     $checkRequest = $this->validation;
