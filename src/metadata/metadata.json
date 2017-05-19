@@ -419,8 +419,8 @@
         {
           "name": "subaccounts",
           "type": "Boolean",
-          "info": "Restrict to this enterprise account and its subaccounts",
-          "required": false
+          "info": "Restrict to this enterprise account and its subaccounts. true or false",
+          "required": true
         },
         {
           "name": "limit",
@@ -463,7 +463,7 @@
           "name": "subaccounts",
           "type": "Boolean",
           "info": "Restrict to this enterprise account and its subaccounts",
-          "required": false
+          "required": true
         },
         {
           "name": "limit",
