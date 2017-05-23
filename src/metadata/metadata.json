@@ -320,7 +320,8 @@
         },
         {
           "name": "unit",
-          "type": "String",
+          "type": "Select",
+          "options":["minute","hour","day","week","month"],
           "info": "minute, hour, day, week or month, default: day.",
           "required": false
         },
@@ -369,7 +370,8 @@
         },
         {
           "name": "unit",
-          "type": "String",
+          "type": "Select",
+          "options":["minute","hour","day","week","month"],
           "info": "minute, hour, day, week or month, default: day.",
           "required": false
         },
@@ -529,7 +531,8 @@
         },
         {
           "name": "unit",
-          "type": "String",
+          "type": "Select",
+          "options":["minute","hour","day","week","month"],
           "info": "minute, hour, day, week or month, default: day.",
           "required": false
         },
@@ -572,7 +575,8 @@
         },
         {
           "name": "unit",
-          "type": "String",
+          "type": "Select",
+          "options":["minute","hour","day","week","month"],
           "info": "minute, hour, day, week or month, default: day.",
           "required": false
         },
@@ -658,7 +662,8 @@
         },
         {
           "name": "unit",
-          "type": "String",
+          "type": "Select",
+          "options":["minute","hour","day","week","month"],
           "info": "minute, hour, day, week or month, default: day.",
           "required": false
         },
@@ -905,7 +910,8 @@
         },
         {
           "name": "unit",
-          "type": "String",
+          "type": "Select",
+          "options":["minute","hour","day","week","month"],
           "info": "minute, hour, day, week or month, default: day.",
           "required": false
         },
@@ -948,7 +954,8 @@
         },
         {
           "name": "unit",
-          "type": "String",
+          "type": "Select",
+          "options":["minute","hour","day","week","month"],
           "info": "minute, hour, day, week or month, default: day.",
           "required": false
         },
@@ -985,7 +992,8 @@
         },
         {
           "name": "unit",
-          "type": "String",
+          "type": "Select",
+          "options":["minute","hour","day","week","month"],
           "info": "minute, hour, day, week or month, default: day.",
           "required": false
         },
@@ -1022,7 +1030,8 @@
         },
         {
           "name": "unit",
-          "type": "String",
+          "type": "Select",
+          "options":["minute","hour","day","week","month"],
           "info": "minute, hour, day, week or month, default: day.",
           "required": false
         },
@@ -1065,7 +1074,8 @@
         },
         {
           "name": "unit",
-          "type": "String",
+          "type": "Select",
+          "options":["minute","hour","day","week","month"],
           "info": "minute, hour, day, week or month, default: day.",
           "required": false
         },
@@ -1108,7 +1118,8 @@
         },
         {
           "name": "unit",
-          "type": "String",
+          "type": "Select",
+          "options":["minute","hour","day","week","month"],
           "info": "minute, hour, day, week or month, default: day.",
           "required": false
         },
@@ -1207,7 +1218,8 @@
         },
         {
           "name": "unit",
-          "type": "String",
+          "type": "Select",
+          "options":["minute","hour","day","week","month"],
           "info": "minute, hour, day, week or month, default: day.",
           "required": false
         },
