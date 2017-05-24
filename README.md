@@ -98,7 +98,7 @@ Returns the number of clicks on a single Bitlink.
 |------------|------------|----------
 | accessToken| credentials| The OAuth access token for specified user.
 | link       | String     | Bitlink.
-| unit       | String     | ```minute```, ```hour```, ```day```, ```week``` or ```month```, default: ```day```.
+| unit       | String     | ```hour```, ```day```, ```week``` or ```month```, default: ```day```.
 | units      | String     | An integer representing the time units to query data for. Pass -1 to return all units of time.
 | rollup     | Boolean    | Return data for multiple units rolled up to a single result instead of a separate value for each period of time.
 | limit      | Number     | 1 to 1000 (default=100).
@@ -110,7 +110,7 @@ Returns metrics about the countries referring click traffic to a single Bitlink.
 |------------|------------|----------
 | accessToken| credentials| The OAuth access token for specified user.
 | link       | String     | Bitlink.
-| unit       | String     | ```minute```, ```hour```, ```day```, ```week``` or ```month```, default: ```day```.
+| unit       | String     | ```hour```, ```day```, ```week``` or ```month```, default: ```day```.
 | units      | String     | An integer representing the time units to query data for. Pass -1 to return all units of time.
 | rollup     | Boolean    | Return data for multiple units rolled up to a single result instead of a separate value for each period of time.
 | limit      | Number     | 1 to 1000 (default=100).
@@ -152,7 +152,7 @@ Returns past destination urls for a keyword with the clicks per destination.
 |------------|------------|----------
 | accessToken| credentials| The OAuth access token for specified user.
 | link       | String     | Bitlink.
-| unit       | String     | ```minute```, ```hour```, ```day```, ```week``` or ```month```, default: ```day```.
+| unit       | String     | ```hour```, ```day```, ```week``` or ```month```, default: ```day```.
 | units      | String     | An integer representing the time units to query data for. Pass -1 to return all units of time.
 | limit      | Number     | 1 to 1000 (default=100).
 
@@ -163,7 +163,7 @@ Returns metrics about the pages referring click traffic to a single Bitlink.
 |------------|------------|----------
 | accessToken| credentials| The OAuth access token for specified user.
 | link       | String     | Bitlink.
-| unit       | String     | ```minute```, ```hour```, ```day```, ```week``` or ```month```, default: ```day```.
+| unit       | String     | ```hour```, ```day```, ```week``` or ```month```, default: ```day```.
 | units      | String     | An integer representing the time units to query data for. Pass -1 to return all units of time.
 | limit      | Number     | 1 to 1000 (default=100).
 
@@ -174,7 +174,7 @@ Returns metrics about the pages referring click traffic to a single Bitlink, gro
 |------------|------------|----------
 | accessToken| credentials| The OAuth access token for specified user.
 | link       | String     | Bitlink.
-| unit       | String     | ```minute```, ```hour```, ```day```, ```week``` or ```month```, default: ```day```.
+| unit       | String     | ```hour```, ```day```, ```week``` or ```month```, default: ```day```.
 | units      | String     | An integer representing the time units to query data for. Pass -1 to return all units of time.
 | limit      | Number     | 1 to 1000 (default=100).
 
@@ -185,7 +185,7 @@ Returns metrics about the domains referring click traffic to a single Bitlink.
 |------------|------------|----------
 | accessToken| credentials| The OAuth access token for specified user.
 | link       | String     | Bitlink.
-| unit       | String     | ```minute```, ```hour```, ```day```, ```week``` or ```month```, default: ```day```.
+| unit       | String     | ```hour```, ```day```, ```week``` or ```month```, default: ```day```.
 | units      | String     | An integer representing the time units to query data for. Pass -1 to return all units of time.
 | limit      | Number     | 1 to 1000 (default=100).
 
@@ -249,7 +249,7 @@ Returns the aggregate number of clicks on all of the authenticated user's Bitlin
 | Field      | Type       | Description
 |------------|------------|----------
 | accessToken| credentials| The OAuth access token for specified user.
-| unit       | String     | ```minute```, ```hour```, ```day```, ```week``` or ```month```, default: ```day```.
+| unit       | String     | ```hour```, ```day```, ```week``` or ```month```, default: ```day```.
 | units      | String     | An integer representing the time units to query data for. Pass -1 to return all units of time.
 | rollup     | Boolean    | Return data for multiple units rolled up to a single result instead of a separate value for each period of time.
 | limit      | Number     | 1 to 1000 (default=100).
@@ -260,7 +260,7 @@ Returns aggregate metrics about the countries referring click traffic to all of 
 | Field      | Type       | Description
 |------------|------------|----------
 | accessToken| credentials| The OAuth access token for specified user.
-| unit       | String     | ```minute```, ```hour```, ```day```, ```week``` or ```month```, default: ```day```.
+| unit       | String     | ```hour```, ```day```, ```week``` or ```month```, default: ```day```.
 | units      | String     | An integer representing the time units to query data for. Pass -1 to return all units of time.
 | limit      | Number     | 1 to 1000 (default=100).
 
@@ -270,7 +270,7 @@ Returns the authenticated user's most-clicked Bitlinks (ordered by number of cli
 | Field      | Type       | Description
 |------------|------------|----------
 | accessToken| credentials| The OAuth access token for specified user.
-| unit       | String     | ```minute```, ```hour```, ```day```, ```week``` or ```month```, default: ```day```.
+| unit       | String     | ```hour```, ```day```, ```week``` or ```month```, default: ```day```.
 | units      | String     | An integer representing the time units to query data for. Pass -1 to return all units of time.
 | limit      | Number     | 1 to 1000 (default=100).
 
@@ -280,7 +280,7 @@ Returns aggregate metrics about the pages referring click traffic to all of the 
 | Field      | Type       | Description
 |------------|------------|----------
 | accessToken| credentials| The OAuth access token for specified user.
-| unit       | String     | ```minute```, ```hour```, ```day```, ```week``` or ```month```, default: ```day```.
+| unit       | String     | ```hour```, ```day```, ```week``` or ```month```, default: ```day```.
 | units      | String     | An integer representing the time units to query data for. Pass -1 to return all units of time.
 | rollup     | Boolean    | Return data for multiple units rolled up to a single result instead of a separate value for each period of time.
 | limit      | Number     | 1 to 1000 (default=100).
@@ -291,7 +291,7 @@ Returns aggregate metrics about the domains referring click traffic to all of th
 | Field      | Type       | Description
 |------------|------------|----------
 | accessToken| credentials| The OAuth access token for specified user.
-| unit       | String     | ```minute```, ```hour```, ```day```, ```week``` or ```month```, default: ```day```.
+| unit       | String     | ```hour```, ```day```, ```week``` or ```month```, default: ```day```.
 | units      | String     | An integer representing the time units to query data for. Pass -1 to return all units of time.
 | rollup     | Boolean    | Return data for multiple units rolled up to a single result instead of a separate value for each period of time.
 | limit      | Number     | 1 to 1000 (default=100).
@@ -302,7 +302,7 @@ Returns the number of Bitlinks created in a given time period by the authenticat
 | Field      | Type       | Description
 |------------|------------|----------
 | accessToken| credentials| The OAuth access token for specified user.
-| unit       | String     | ```minute```, ```hour```, ```day```, ```week``` or ```month```, default: ```day```.
+| unit       | String     | ```hour```, ```day```, ```week``` or ```month```, default: ```day```.
 | units      | String     | An integer representing the time units to query data for. Pass -1 to return all units of time.
 | rollup     | Boolean    | Return data for multiple units rolled up to a single result instead of a separate value for each period of time.
 | limit      | Number     | 1 to 1000 (default=100).
@@ -330,7 +330,7 @@ Returns the number of clicks on Bitlinks pointing to the specified tracking doma
 |------------|------------|----------
 | accessToken| credentials| The OAuth access token for specified user.
 | domain     | String     | A tracking domain as returned from .
-| unit       | String     | ```minute```, ```hour```, ```day```, ```week``` or ```month```, default: ```day```.
+| unit       | String     | ```hour```, ```day```, ```week``` or ```month```, default: ```day```.
 | units      | String     | An integer representing the time units to query data for. Pass -1 to return all units of time.
 | rollup     | Boolean    | Return data for multiple units rolled up to a single result instead of a separate value for each period of time.
 | limit      | Number     | 1 to 1000 (default=100).
