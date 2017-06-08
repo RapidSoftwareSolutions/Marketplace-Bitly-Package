@@ -1,7 +1,7 @@
 {
   "package": "Bitly",
   "tagline": "Bitly API",
-  "description": "",
+  "description": "URL Shortener and Link Management Platform.",
   "image": "https://logo.clearbit.com/bitly.com",
   "repo": "https://github.com/RapidSoftwareSolutions/Marketplace-Bitly-Package",
   "keywords": [
